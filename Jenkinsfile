@@ -6,9 +6,9 @@ pipeline {
         sh "hostname"
       }
     }
-    stage("2nd Stage") {
+    stage("Build the project") {
       steps{
-        sh "date"
+        sh "mvn clean package"
       }
     }
     stage("3rd Stage") {
